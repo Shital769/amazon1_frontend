@@ -37,6 +37,7 @@ const OrderHistoryScreen = () => {
         const { data } = await axios.get(`/api/orders/myorders`, {
           headers: { authorization: `Bearer ${userInfo.token}` },
         });
+        console.log(data);
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (error) {
         dispatch({ type: "FETCH_FAIL", payload: getError(error) });
