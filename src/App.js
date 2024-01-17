@@ -96,7 +96,8 @@ function App() {
                     {cart.cartItems.length > 0 && (
                       <Badge pill bg="danger">
                         {cart.cartItems.reduce(
-                          (a, c) => a + (typeof c.quantity === "number"),
+                          // (a, c) => a + (typeof c.quantity === "number"),0
+                          (a, c) => a + c.quantity,
                           0
                         )}
                       </Badge>
